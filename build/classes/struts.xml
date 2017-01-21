@@ -8,6 +8,12 @@
 		<action name="hello" class="com.caysever.action.HelloWordAction">
 			<result name="success">/hello.jsp</result>
 		</action>
+		<action name="count" class="com.caysever.action.CounterAction">
+			<result name="success">/count.jsp</result>
+		</action>
+		<action name="*Number" method="{1}" class="com.caysever.action.CalculatorAction">
+      	  <result name="success">/{1}Result.jsp</result>
+    	</action>
 	</package>
 
 </struts>

@@ -5,21 +5,22 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Struts2 Starter Project</title>
+<title>Hello Struts2</title>
 </head>
 <body>
 
 	<div class="container">
-		<form action="hello">
+		<form action="count">
 			<fieldset>
 				<!-- Form Name -->
-				<legend>Hello</legend>
 
-				<!-- Text input-->
-				<label for="message">Message : </label>
-				<s:textfield id="message" name="message" type="text" class="form-control input-md"
-					required="" />
-				<s:submit></s:submit>
+				<legend>Counter</legend>
+
+				Count : ${count}
+				<s:hidden id="counter.count" name="counter.count" />
+				<s:select label="Select a operation"
+					list="#{'true':'increment', 'false':'decrement'}" name="counter.incrementOrDecrement" value="1" />
+				<s:submit value="Add"></s:submit>
 			</fieldset>
 		</form>
 
@@ -27,3 +28,4 @@
 
 </body>
 </html>
+

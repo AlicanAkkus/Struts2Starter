@@ -10,15 +10,20 @@
 <body>
 
 	<div class="container">
-		<form action="hello">
+		<form action="addNumber">
 			<fieldset>
 				<!-- Form Name -->
-				<legend>Hello</legend>
+				<legend>Calculator</legend>
 
 				<!-- Text input-->
-				<label for="message">Message : </label>
-				<s:textfield id="message" name="message" type="text" class="form-control input-md"
+				<label for="calculator.firstNumber">First Number : </label>
+				<s:textfield id="calculator.firstNumber" name="calculator.firstNumber" type="text" class="form-control input-md"
 					required="" />
+					
+				<!-- Text input-->
+				<label for="calculator.secondNumber">Second Number : </label>
+				<s:textfield id="calculator.secondNumber" name="calculator.secondNumber" type="text" class="form-control input-md"
+					required="" />	
 				<s:submit></s:submit>
 			</fieldset>
 		</form>
